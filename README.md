@@ -27,7 +27,7 @@ Hook to verify that the commit message complies with the standard.
 - Now run the following command 👇
 
 ```sh
- $ curl https://raw.githubusercontent.com/MaxC0d3/git-hooks-standard/main/commit-msg -o ./.git/hooks/commit-msg
+ curl https://raw.githubusercontent.com/MaxC0d3/git-hooks-standard/main/commit-msg -o ./.git/hooks/commit-msg
 ```
 #### Commit standard prefixes
 
