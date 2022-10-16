@@ -12,13 +12,13 @@ Here you will find hooks to verify rules before pushing to the local repository.
 
 ## commit-msg
 
+Hook to verify that the commit message complies with the standard.
+
 ### Examples 
 
 ![2022-10-15_20h56_35](https://user-images.githubusercontent.com/43556246/196014252-02f55ff2-56f5-4531-8f75-4f2a9dc402cb.png)
 
 ![2022-10-15_20h57_22](https://user-images.githubusercontent.com/43556246/196014264-19d5b4f1-ebe9-49df-982d-72665fda9c31.png)
-
-Hook to verify that the commit message complies with the standard.
 
 ### Installation commit-msg on your proyect
 
