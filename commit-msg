@@ -1,6 +1,7 @@
 #!/bin/bash
 
-commitMsg=$(git log -1 --pretty=%B)
+INPUT_FILE=$1
+commitMsg=`head -n1 $INPUT_FILE`
 
 keywords=('[F|f]eat' '[F|f]ix' '[P|p]erf' '[B|b]uild' '[C|c]i' '[D|d]ocs' '[R|r]efactor' '[S|s]tyle' '[T|t]est')
 kn=('feat' 'fix' 'perf' 'build' 'ci' 'docs' 'refactor' 'style' 'test')
@@ -13,14 +14,13 @@ for key in ${keywords[@]}; do
   if [[ $commitMsg == $key* ]];
   then
     echo -e -n "\U2705"
-    echo " The commit message is valid. Doing push..."
+    echo -e " The confirmation ${PALETTE_GREEN} message is valid ${PALLETE_NC}. You can now push..."
     exit 0
   fi
 done
 
 echo -e -n "\U274C"
 echo " Commit message is invalid."
-echo -e "Use ${PALETTE_RED}git commit --amend${PALLETE_NC} to change the commit message.\n"
-echo -e "The commit message should start with one of the following keywords: ${PALETTE_GREEN} ${kn[*]}"
+echo -e "The ${PALETTE_RED} commit message ${PALLETE_NC} should start with one of the following keywords: ${PALETTE_GREEN} ${kn[*]}"
 
 exit 1
