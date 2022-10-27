@@ -47,6 +47,4 @@ Hook to verify that the commit message complies with the standard.
 ## Authors
 
 - [@MaxC0d3](https://www.github.com/MaxC0d3)
-- [@04l3x](https://www.github.com/04l3x)
-
 
